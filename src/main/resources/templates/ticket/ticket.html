@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!--<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>-->
+        <title>チケット購入</title>
+    </head>
+    <body>
+        <h1>チケット購入</h1>
+        <form action="/park/ticket" method="post">
+            <div class="1">
+                大人 : <input type="number"  min="0"  id="ticket_count1" name="ticket_count1">
+ 
+                <tr><td th:text="${item.ticket_sum1}"></td></tr>
+            </div>
+            <div class="2">
+                子供 : <input type="number" min="0" id="ticket_count2" name="ticket_count2">
+                <tr><td th:text="${item.ticket_sum2}"></td></tr>
+            </div>
+        </form>
+        <form method="post">
+            <div>
+                <!--クーポン利用 : <tr><td th:text=""></td></tr>-->
+            </div>
+            <div>
+                <!--合計 : <tr><td th:text=""></td></tr>-->
+            </div>
+        </form>
+            <table>
+                <tr>
+                    <div>姓 : <input type="text" value="${.first_name}"></div>
+                    <div>名 : <input type="text" value="${.last_name}"></div>
+                    <div>セイ : <input type="text" value="${.first_name2}"></div>
+                    <div>メイ : <input type="text" value="${.last_name2}"></div>
+                    <!--<td th:text="${.first_name}"></td>
+                    <td th:text="${.last_name}"></td>
+                    <td th:text="${.first_name2}"></td>
+                    <td th:text="${.last_name2}"></td>-->
+                </tr>
+            </table>
+            <h2>お客様詳細</h2>
+            <table>
+                <tr>
+                    <div>郵便番号 : <input type="text" value="${.post_code}"></td></div>
+                    <div>都道府県 : <input type="text" value="${.user_district}"></td></div>
+                    <div>市町村 : <input type="text" value="${.user_address}"></td></div>
+                    <div>建物名 : <input type="text" value="${.user_address2}"></td></div>
+                    <div>電話番号 : <input type="text" value="${.user_telNo}"></td></div>
+                    <div>メールアドレス : <input type="text" value="${.user_mail}"></td></div>
+                </tr>
+            </table>
+            <button type="submit">購入</button>
+        </form>
+
+        <script>
+            $(function(){
+                $('button1').click(function () {
+                    
+                });
+            });
+        </script>
+
+    </body>
+</html>
